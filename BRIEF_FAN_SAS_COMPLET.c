@@ -42,6 +42,8 @@ void affichage() {
 // Function to filter tasks by priority
 void filtrerParPriorite(int prioriteRecherchee) {
     int trouve = 0;//utilisée pour suivre si des tâches avec la priorité spécifiée ont été trouvées.
+     
+    
     printf("Tâches avec priorité ");
 
     if (prioriteRecherchee == 1) {
@@ -62,10 +64,11 @@ void filtrerParPriorite(int prioriteRecherchee) {
             trouve = 1;//au moins une tâche avec la priorité spécifiée a été trouvée.
         }
     }
-    if (!trouve)//vérifie TROUVE toujours à 0
-    {
+    {  if (!trouve)//vérifie TROUVE toujours à 0
         printf("Aucune tâche trouvée avec la priorité spécifiée.\n");
+    
     }
+ 
 }
 
 // Function to modify a task
@@ -89,7 +92,7 @@ void modifier(tache tch[], int index) {
 
 // Function to validate date
 int dateValide(int jour, int mois, int annee) {
-    if (annee < 1900 || annee > 2100) {
+    if (annee < 2024|| annee > 2100) {
         return 0;// retourne la date est invalide.
     }
     if (mois < 1 || mois > 12) {
@@ -205,7 +208,7 @@ printf("--");
                 printf("Choix invalide. Réessayez.\n");
                 break;
         }
-    } while (choix != 0);
+    } while (choix != 6);
 
     return 0;
 }
