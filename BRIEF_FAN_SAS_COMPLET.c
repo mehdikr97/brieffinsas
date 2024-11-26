@@ -205,7 +205,7 @@ printf("--");
                 printf("Choix invalide. Réessayez.\n");
                 break;
         }
-    } while (choix != 0);
+    } while (choix != 6);
 
     return 0;
 }
